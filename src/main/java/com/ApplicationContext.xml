@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.demo.EmployeeBean" id="emp">
+		<property name="eid" value="101"></property>
+		<property name="name" value="royal"></property>
+	</bean>
+
+	<bean class="com.demo.StudentDetail" id="detail">
+		<property name="city" value="Ahmedabad"></property>
+	</bean>
+
+
+	<!-- //Date date = new Date; -->
+	<bean class="java.util.Date" id="date">
+	</bean>
+
+	<bean class="com.demo.StudentBean" id="stu">
+		<property name="sMarks" value="1500"></property>
+		<property name="joiningDate" ref="date"></property>
+		<property name="studentDetail" ref="detail"></property>
+	</bean>
+
+
+</beans>
